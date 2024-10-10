@@ -365,3 +365,18 @@ def sum(num1, num2, *nums):
 
 print(sum(1, 2, 3))  # 6
 print(sum(1, 2, 3, 4))  # 10
+
+###################################################################
+
+def print_hello_multi_lang(lang):
+    match lang:
+        case 'rus' as code:
+            print('Привет', code)
+        case 'en' | "american english" | "british english" | "english":
+            print('Hello')
+        case _:
+            print('Undefined lang')
+
+print_hello_multi_lang('rus')
+print_hello_multi_lang('british english')
+print_hello_multi_lang('sss')
